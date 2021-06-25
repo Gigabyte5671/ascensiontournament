@@ -125,6 +125,8 @@ p{
   padding-bottom: 20px;
   height: var(--section_height);
   background-color: var(--primary_color);
+  background-image: url("../assets/images/katabatic-1.jpg");
+  background-size: cover;
   overflow: hidden;
 }
 .landing .bgVideo{
