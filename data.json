@@ -1,0 +1,56 @@
+{
+  "sections":{
+    "001":{
+      "title":"Tournaments",
+      "slides":{
+        "001":{
+          "title":"#1 Spring &quot;Ascension&quot;",
+          "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
+        },
+        "002":{
+          "title":"#2 Summer &quot;Phoenix&quot;",
+          "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
+        },
+        "003":{
+          "title":"#3 Fall &quot;Dominion&quot;",
+          "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
+        },
+        "004":{
+          "title":"#4 Winter &quot;Worlds Ascend&quot;",
+          "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
+        }
+      }
+    },
+    "002":{
+      "title":"Teams",
+      "slides":{
+        "001":{
+          "title":"XLR8",
+          "desc":"Player Names and Stats &apos;n&apos; Stuff"
+        },
+        "002":{
+          "title":"BAPPLE",
+          "desc":"Player Names and Stats &apos;n&apos; Stuff"
+        }
+      }
+    },
+    "003":{
+      "title":"Highlights",
+      "slides":{
+        "001":{
+          "title":"",
+          "desc":"The highlighs video and other clips will go here..."
+        }
+      }
+    },
+    "004":{
+      "title":"Signups",
+      "slides":{
+        "001":{
+          "title":"",
+          "desc":"The signup form will go here..."
+        }
+      }
+    }
+  }
+}

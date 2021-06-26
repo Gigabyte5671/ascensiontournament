@@ -25,13 +25,8 @@
     <main>
       <div id="navbar">
         <a href="" id="logo"><img src="assets/icons/United_Anarchy_Enterprises_Logo_3_W_small.png" draggable="false" alt="site logo"><div class="title">WT</div></a>
-        <div class="navlinks">
+        <div id="navlinks">
           <a href="#home"><p>Home</p><div></div></a>
-          <a href="#tournaments"><p>Tournaments</p><div></div></a>
-          <a href="#teams"><p>Teams</p><div></div></a>
-          <a href="#highlights"><p>Highlights</p><div></div></a>
-          <a href="#signups"><p>Signups</p><div></div></a>
-          <a href="#" style="float:right;" id="loginButton"><p>Login<img src="assets/icons/login_black_24dp.svg" draggable="false" alt=""></p></a>
         </div>
       </div>
       
@@ -47,31 +42,31 @@
         <div class="sectionBreak" id="tournaments"><h1>TOURNAMENTS:</h1><h1>///</h1></div>
         
         <div class="section">
-          <div class="slideLeft" onclick=""><img src="assets/icons/chevron_left_black_24dp.svg" draggable="false" alt=""></div>
-          <div class="slideRight" onclick=""><img src="assets/icons/chevron_right_black_24dp.svg" draggable="false" alt=""></div>
-          <div class="slideIndicator"><span></span><span></span><span></span><span></span></div>
-          <div class="box">
+          <div class="slideLeft" onclick="plusSlides(-1)"><img src="assets/icons/chevron_left_black_24dp.svg" draggable="false" alt=""></div>
+          <div class="slideRight" onclick="plusSlides(1)"><img src="assets/icons/chevron_right_black_24dp.svg" draggable="false" alt=""></div>
+          <div class="slideIndicator"><span onclick="switchToSlide(1)"></span><span onclick="switchToSlide(2)"></span><span onclick="switchToSlide(3)"></span><span onclick="switchToSlide(4)"></span></div>
+          <div class="box slide">
             <h2>#1 Spring "Ascension"</h2>
             <div class="boxInner">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis.</p>
             </div>
             <div class="boxBackgroundImage" style="background-image:url('assets/images/raindance-1.jpg')"></div>
           </div>
-          <div class="box">
+          <div class="box slide">
             <h2>#2 Summer "Phoenix"</h2>
             <div class="boxInner">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis.</p>
             </div>
             <div class="boxBackgroundImage" style="background-image:url('assets/images/crossfire-1.jpg')"></div>
           </div>
-          <div class="box">
+          <div class="box slide">
             <h2>#3 Fall "Dominion"</h2>
             <div class="boxInner">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis.</p>
             </div>
             <div class="boxBackgroundImage" style="background-image:url('assets/images/arx_novena-1.jpg')"></div>
           </div>
-          <div class="box">
+          <div class="box slide">
             <h2>#4 Winter "Worlds Ascend"</h2>
             <div class="boxInner">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis.</p>
@@ -137,6 +132,92 @@
     </main>
   </body>
   
+  <script src="lib/site_message.js"></script>
+  <script src="lib/jquery.min.js"></script>
   <script>
+    var sdata;
+    var data_fetch_enable = 1;
+    function getServerData(){
+      if(data_fetch_enable == 1){
+        data_fetch_enable = 0;
+        $.ajax({
+          dataType:"json",
+          url:"data.json",
+          cache:false,
+          success:function(data1){
+            sdata = data1;
+            buildDOM();
+          },
+          error:function(xhr, status, err){
+            console.log("Error " + xhr.status);
+          }
+        });
+      }
+    }
+  </script>
+  <script>
+    function buildDOM(){
+      //Navbar
+      Object.keys(sdata["sections"]).forEach(function(k){
+        var item = '<a href="#' + sdata["sections"][k]["title"].toLowerCase() + '"><p>' + sdata["sections"][k]["title"] + '</p><div></div></a>';
+        $("#navlinks").append(item);
+      });
+      var item = '<a href="#" id="loginButton"><p>Login<img src="assets/icons/login_black_24dp.svg" draggable="false" alt=""></p></a>'
+      $("#navlinks").append(item);
+      
+      //Sections
+      Object.keys(sdata["sections"]).forEach(function(k){
+        var item = '<a href="#' + sdata["sections"][k]["title"].toLowerCase() + '"><p>' + sdata["sections"][k]["title"] + '</p><div></div></a>';
+        $(".navlinks").append(item);
+      });
+      var item = '<a href="#" id="loginButton"><p>Login<img src="assets/icons/login_black_24dp.svg" draggable="false" alt=""></p></a>'
+      $(".navlinks").append(item);
+    }
+    getServerData();
+  </script>
+  <script>
+    var prevSlide
+    var slideIndex = 1;
+    switchToSlide(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n){
+      switchToSlide(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n){
+      switchToSlide(slideIndex = n);
+    }
+
+    function switchToSlide(n){
+      var i;
+      var slides = document.getElementsByClassName("slide");
+      //var dots = document.getElementsByClassName("dot");
+      
+      if(n > slides.length){slideIndex = 1;}
+      if(n < 1){slideIndex = slides.length;}
+      for(i = 0; i < slides.length; i++){
+        slides[i].style.display = "flex";
+      }
+      /*for(i = 0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace(" active", "");
+      }*/
+      if(n < prevSlide){
+        for(i = 0; i < slides.length; i++){
+          slides[slideIndex - 1].classList.add("slideMoveRight");
+          slides[i].classList.remove("slideMoveLeft");
+        }
+      }
+      if(n > prevSlide){
+        for(i = 0; i < slides.length; i++){
+          slides[i].classList.remove("slideMoveRight");
+          slides[slideIndex - 1].classList.add("slideMoveLeft");
+        }
+      }
+      //slides[slideIndex - 1].style.display = "flex";
+      //dots[slideIndex - 1].className += " active";
+      prevSlide = slideIndex;
+    }
   </script>
 </html>
