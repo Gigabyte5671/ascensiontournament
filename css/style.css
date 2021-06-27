@@ -150,7 +150,7 @@ script{
   min-width: 100%;
   min-height: 100%;
 }
-.landing img{
+.landing .logo{
   z-index: 1;
   height: calc(var(--section_height) - 150px);
 }
@@ -262,9 +262,18 @@ script{
   height: 100%;
   background-size: cover;
 }
-.boxInner{
+.particles{
   position: absolute;
   z-index: 1;
+  top: -60px;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  mix-blend-mode: screen;
+}
+.boxInner{
+  position: absolute;
+  z-index: 2;
   justify-content: space-between;
   width: 70%;
   height: 80%;
