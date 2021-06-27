@@ -26,11 +26,71 @@
       "slides":{
         "001":{
           "title":"XLR8",
-          "desc":"Player Names and Stats &apos;n&apos; Stuff"
+          "desc":"",
+          "players":{
+            "001":{
+              "name":"",
+              "roles":["",""]
+            },
+            "002":{
+              "name":"",
+              "roles":["",""]
+            },
+            "003":{
+              "name":"",
+              "roles":["",""]
+            },
+            "004":{
+              "name":"",
+              "roles":["",""]
+            },
+            "005":{
+              "name":"",
+              "roles":["",""]
+            },
+            "006":{
+              "name":"",
+              "roles":["",""]
+            },
+            "007":{
+              "name":"",
+              "roles":["",""]
+            }
+          }
         },
         "002":{
           "title":"BAPPLE",
-          "desc":"Player Names and Stats &apos;n&apos; Stuff"
+          "desc":"",
+          "players":{
+            "001":{
+              "name":"",
+              "roles":["",""]
+            },
+            "002":{
+              "name":"",
+              "roles":["",""]
+            },
+            "003":{
+              "name":"",
+              "roles":["",""]
+            },
+            "004":{
+              "name":"",
+              "roles":["",""]
+            },
+            "005":{
+              "name":"",
+              "roles":["",""]
+            },
+            "006":{
+              "name":"",
+              "roles":["",""]
+            },
+            "007":{
+              "name":"",
+              "roles":["",""]
+            }
+          }
         }
       }
     },
