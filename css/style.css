@@ -69,7 +69,11 @@ script{
   margin-right: 30px;
 }
 #logo img{
+  width: 55px;
+  height: 55px;
   margin-left: 5px;
+  background-color: black;
+  border-radius: 50%
 }
 #logo .title{
   margin-top: -7px;
@@ -273,13 +277,13 @@ script{
   overflow: auto;
 }
 .boxInner > div:nth-child(1){
-  width: calc(100% / 3);
+  width: 20%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
 }
 .boxInner > div:nth-child(2){
-  width: calc(100% / 3);
+  width: 40%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -289,7 +293,7 @@ script{
   border-right: 1px solid var(--glass_border_color);
 }
 .boxInner > div:nth-child(3){
-  width: calc(100% / 3);
+  width: 40%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-end;
@@ -297,13 +301,12 @@ script{
 .boxInner h2{
   margin: unset;
   color: white;
-  font-size: 18px;
+  font-size: 22px;
 }
 .tournamentEmblem{
   display: block;
   width: 100px;
   height: 100px;
-  border: 1px dashed white;
 }
 .teamEmblem{
   display: block;
@@ -371,7 +374,28 @@ script{
 .stats-pie-text{
   position: absolute;
   z-index: 2;
+  width: 36px;
+  margin-top: 10px;
+  margin-left: -2px;
+}
+.stats-pie-text p{
   font-size: 22px;
+  font-family: 'Space Mono', monospace;
+}
+.stats-pie-text p:nth-child(1)::before{
+  content: "WINS";
+  position: absolute;
+  top: -6px;
+  left: -2px;
+  font-size: 8px;
+  font-family: 'Space Mono', monospace;
+}
+.stats-pie-text p:nth-child(3)::before{
+  content: "LOSS";
+  position: absolute;
+  top: -6px;
+  right: -7px;
+  font-size: 8px;
   font-family: 'Space Mono', monospace;
 }
 
@@ -391,7 +415,9 @@ script{
 
 
 footer{
-  color: lightgrey;
+  margin-top: auto;
+  color: white;
+  opacity: 0.6;
 }
 
 
