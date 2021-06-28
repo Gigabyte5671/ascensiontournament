@@ -1,114 +1,131 @@
 {
   "sections":{
     "001":{
-      "title":"Tournaments",
+      "meta":{
+        "id":"tournaments",
+        "title":"Tournaments",
+        "styles":""
+      },
       "slides":{
         "001":{
-          "title":"#1 Spring &quot;Ascension&quot;",
-          "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
-        },
-        "002":{
-          "title":"#2 Summer &quot;Phoenix&quot;",
-          "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
-        },
-        "003":{
-          "title":"#3 Fall &quot;Dominion&quot;",
-          "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
-        },
-        "004":{
-          "title":"#4 Winter &quot;Worlds Ascend&quot;",
-          "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
-        }
-      }
-    },
-    "002":{
-      "title":"Teams",
-      "slides":{
-        "001":{
-          "title":"XLR8",
-          "desc":"",
-          "players":{
-            "001":{
-              "name":"",
-              "roles":["",""]
+          "meta":{
+            "id":"",
+            "title":"#1 Spring &quot;Ascension&quot;",
+            "styles":"",
+            "type":"text"
+          },
+          "content":{
+            "img":{
+              "src":"ranks/9.webp"
             },
-            "002":{
-              "name":"",
-              "roles":["",""]
+            "bgImg":{
+              "src":"raindance-1.jpg"
             },
-            "003":{
-              "name":"",
-              "roles":["",""]
-            },
-            "004":{
-              "name":"",
-              "roles":["",""]
-            },
-            "005":{
-              "name":"",
-              "roles":["",""]
-            },
-            "006":{
-              "name":"",
-              "roles":["",""]
-            },
-            "007":{
-              "name":"",
-              "roles":["",""]
-            }
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
           }
         },
         "002":{
-          "title":"BAPPLE",
-          "desc":"",
-          "players":{
-            "001":{
-              "name":"",
-              "roles":["",""]
+          "meta":{
+            "id":"",
+            "title":"#2 Summer &quot;Phoenix&quot;",
+            "styles":"",
+            "type":"text"
+          },
+          "content":{
+            "img":{
+              "src":"ranks/19.webp"
             },
-            "002":{
-              "name":"",
-              "roles":["",""]
+            "bgImg":{
+              "src":"crossfire-1.jpg"
             },
-            "003":{
-              "name":"",
-              "roles":["",""]
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
+          }
+        },
+        "003":{
+          "meta":{
+            "id":"",
+            "title":"#3 Fall &quot;Dominion&quot;",
+            "styles":"",
+            "type":"text"
+          },
+          "content":{
+            "img":{
+              "src":"ranks/34.webp"
             },
-            "004":{
-              "name":"",
-              "roles":["",""]
+            "bgImg":{
+              "src":"arx_novena-1.jpg"
             },
-            "005":{
-              "name":"",
-              "roles":["",""]
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
+          }
+        },
+        "004":{
+          "meta":{
+            "id":"",
+            "title":"#4 Winter &quot;Worlds Ascend&quot;",
+            "styles":"",
+            "type":"text"
+          },
+          "content":{
+            "img":{
+              "src":"ranks/39.webp"
             },
-            "006":{
-              "name":"",
-              "roles":["",""]
+            "bgImg":{
+              "src":"katabatic-1.jpg"
             },
-            "007":{
-              "name":"",
-              "roles":["",""]
-            }
+            "text":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Est ultricies integer quis auctor. Eu consequat ac felis donec et. Pulvinar elementum integer enim neque. Mi bibendum neque egestas congue. Sagittis purus sit amet volutpat consequat. Nulla posuere sollicitudin aliquam ultrices sagittis."
           }
         }
       }
     },
     "003":{
-      "title":"Highlights",
+      "meta":{
+        "id":"highlights",
+        "title":"Highlights",
+        "styles":""
+      },
       "slides":{
         "001":{
-          "title":"",
-          "desc":"The highlighs video and other clips will go here..."
+          "meta":{
+            "id":"",
+            "title":"",
+            "styles":"",
+            "type":"text"
+          },
+          "content":{
+            "img":{
+              "src":""
+            },
+            "bgImg":{
+              "src":""
+            },
+            "text":"The highlighs video and other clips will go here..."
+          }
         }
       }
     },
     "004":{
-      "title":"Signups",
+      "meta":{
+        "id":"signups",
+        "title":"Signups",
+        "styles":""
+      },
       "slides":{
         "001":{
-          "title":"",
-          "desc":"The signup form will go here..."
+          "meta":{
+            "id":"",
+            "title":"",
+            "styles":"",
+            "type":"text"
+          },
+          "content":{
+            "img":{
+              "src":""
+            },
+            "bgImg":{
+              "src":""
+            },
+            "text":"The signup form will go here..."
+          }
         }
       }
     }
