@@ -305,9 +305,15 @@ script{
 }
 .boxInner > div:nth-child(3){
   width: 40%;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.boxInner > div:nth-child(3) > div{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 .boxInner h2{
   margin: unset;
@@ -358,6 +364,7 @@ script{
   height: 100px;
   min-width: 100px;
   min-height: 100px;
+  margin: 5px;
 }
 .stats-pie-bar{
   position: absolute;
@@ -418,6 +425,7 @@ script{
   align-items: flex-end;
   width: 20px;
   height: 200px;
+  margin: 5px;
   border: 1px solid var(--glass_border_color);
   border-radius: 3px;
 }
@@ -430,7 +438,7 @@ script{
   background-color: var(--glass_background_color);
 }
 .stats-bar-text{
-  
+  transform: rotate(-90deg);
 }
 
 
