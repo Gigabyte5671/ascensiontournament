@@ -33,7 +33,7 @@
       <div id="pageContent">
         <div class="landing" id="home">
           <video autoplay="" muted="" loop="" class="bgVideo bgFadeIn">
-            <source src="https://links.politecrow.com/ta/movie_max_edit.webm" type="video/webm">
+            <!--<source src="https://links.politecrow.com/ta/movie_max_edit.webm" type="video/webm">-->
           </video>
           <img class="logo" src="assets/icons/United_Anarchy_Enterprises_Logo_3_W_small.png" draggable="false" alt="site logo">
           <h1>Wilderzone Tournaments</h1>
@@ -42,10 +42,10 @@
         <div class="sectionBreak" id="tournaments"><h1>TOURNAMENTS:</h1><h1>///</h1></div>
         
         <div class="section">
-          <div class="slideLeft" onclick="plusSlides(-1)"><img src="assets/icons/chevron_left_black_24dp.svg" draggable="false" alt=""></div>
-          <div class="slideRight" onclick="plusSlides(1)"><img src="assets/icons/chevron_right_black_24dp.svg" draggable="false" alt=""></div>
-          <div class="slideIndicator"><span class="sDot" onclick="currentSlide(1)"></span><span class="sDot" onclick="currentSlide(2)"></span><span class="sDot" onclick="currentSlide(3)"></span><span class="sDot" onclick="currentSlide(4)"></span></div>
-          <div class="box slide">
+          <div class="slideLeft" onclick="moveCarousel(event,'move',-1)"><img src="assets/icons/chevron_left_black_24dp.svg" draggable="false" alt=""></div>
+          <div class="slideRight" onclick="moveCarousel(event,'move',1)"><img src="assets/icons/chevron_right_black_24dp.svg" draggable="false" alt=""></div>
+          <div class="slideIndicator"><span onclick="moveCarousel(event,'to',1)"></span><span onclick="moveCarousel(event,'to',2)"></span><span onclick="moveCarousel(event,'to',3)"></span><span onclick="moveCarousel(event,'to',4)"></span></div>
+          <div class="box">
             <div class="boxInner">
               <div>
                 <h2>#1 Spring "Ascension"</h2>
@@ -60,7 +60,7 @@
             <div class="boxBackgroundImage" style="background-image:url('assets/images/raindance-1.jpg')"></div>
             <img class="particles" src="assets/images/particles_960.gif" draggable="false" alt="">
           </div>
-          <div class="box slide">
+          <div class="box">
             <div class="boxInner">
               <div>
                 <h2>#2 Summer "Phoenix"</h2>
@@ -75,7 +75,7 @@
             <div class="boxBackgroundImage" style="background-image:url('assets/images/crossfire-1.jpg')"></div>
             <img class="particles" src="assets/images/particles_960.gif" draggable="false" alt="">
           </div>
-          <div class="box slide">
+          <div class="box">
             <div class="boxInner">
               <div>
                 <h2>#3 Fall "Dominion"</h2>
@@ -90,7 +90,7 @@
             <div class="boxBackgroundImage" style="background-image:url('assets/images/arx_novena-1.jpg')"></div>
             <img class="particles" src="assets/images/particles_960.gif" draggable="false" alt="">
           </div>
-          <div class="box slide">
+          <div class="box">
             <div class="boxInner">
               <div>
                 <h2>#4 Winter "Worlds Ascend"</h2>
@@ -110,9 +110,9 @@
         <div class="sectionBreak" id="teams"><h1>TEAMS:</h1><h1>///</h1></div>
         
         <div class="section">
-          <div class="slideLeft" onclick=""><img src="assets/icons/chevron_left_black_24dp.svg" draggable="false" alt=""></div>
-          <div class="slideRight" onclick=""><img src="assets/icons/chevron_right_black_24dp.svg" draggable="false" alt=""></div>
-          <div class="slideIndicator"><span></span><span></span></div>
+          <div class="slideLeft" onclick="moveCarousel(event,'move',-1)"><img src="assets/icons/chevron_left_black_24dp.svg" draggable="false" alt=""></div>
+          <div class="slideRight" onclick="moveCarousel(event,'move',-1)"><img src="assets/icons/chevron_right_black_24dp.svg" draggable="false" alt=""></div>
+          <div class="slideIndicator"><span onclick="moveCarousel(event,'to',1)"></span><span onclick="moveCarousel(event,'to',2)"></span></div>
           <div class="box">
             <div class="boxInner">
               <div>
@@ -174,7 +174,7 @@
         <div class="sectionBreak" id="highlights"><h1>HIGHLIGHTS:</h1><h1>///</h1></div>
         
         <div class="section">
-          <div class="slideIndicator"><span></span></div>
+          <div class="slideIndicator"><span onclick="moveCarousel(event,'to',1)"></span></div>
           <div class="box">
             <h2></h2>
             <div class="boxInner">
@@ -187,7 +187,7 @@
         <div class="sectionBreak" id="signups"><h1>SIGNUPS:</h1><h1>///</h1></div>
         
         <div class="section">
-          <div class="slideIndicator"><span></span></div>
+          <div class="slideIndicator"><span onclick="moveCarousel(event,'to',1)"></span></div>
           <div class="box">
             <h2></h2>
             <div class="boxInner">
@@ -197,17 +197,13 @@
           </div>
         </div>
         
-        <div class="section" style="height:100px;background-color:black;">
-          <footer>
-            <p>Designed&nbsp;by&nbsp;Gigabyte5671&nbsp;&copy;2021&nbsp;|&nbsp;Gigabyte#3310&nbsp;|&nbsp;Thanks&nbsp;for&nbsp;your&nbsp;support<img src="assets/icons/heart-24px.svg" draggable="false" alt=""></p>
-          </footer>
-        </div>
       </div>
     </main>
   </body>
   
   <script src="lib/site_message.js"></script>
   <script src="lib/jquery.min.js"></script>
+  <script src="lib/buildDOM.js"></script>
   <script>
     var sdata;
     var data_fetch_enable = 1;
@@ -220,7 +216,7 @@
           cache:false,
           success:function(data1){
             sdata = data1;
-            buildDOM();
+            //buildDOM();
           },
           error:function(xhr, status, err){
             console.log("Error " + xhr.status);
@@ -228,57 +224,6 @@
         });
       }
     }
-  </script>
-  <script>
-    function buildDOM(){
-      //Navbar
-      Object.keys(sdata["sections"]).forEach(function(k){
-        var item = '<a href="#' + sdata["sections"][k]["title"].toLowerCase() + '"><p>' + sdata["sections"][k]["title"] + '</p><div></div></a>';
-        $("#navlinks").append(item);
-      });
-      var item = '<a href="#" id="loginButton"><p>Login<img src="assets/icons/login_black_24dp.svg" draggable="false" alt=""></p></a>'
-      $("#navlinks").append(item);
-      
-      //Sections
-      Object.keys(sdata["sections"]).forEach(function(k){
-        var item = '<a href="#' + sdata["sections"][k]["title"].toLowerCase() + '"><p>' + sdata["sections"][k]["title"] + '</p><div></div></a>';
-        $(".navlinks").append(item);
-      });
-      var item = '<a href="#" id="loginButton"><p>Login<img src="assets/icons/login_black_24dp.svg" draggable="false" alt=""></p></a>'
-      $(".navlinks").append(item);
-    }
     getServerData();
-  </script>
-  <script>
-    var slideIndex = 1;
-    switchToSlide(slideIndex);
-
-    // Next/previous controls
-    function plusSlides(n){
-      switchToSlide(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n){
-      switchToSlide(slideIndex = n);
-    }
-
-    function switchToSlide(n){
-      n = parseInt(n);
-      var i;
-      var slides = document.getElementsByClassName("slide");
-      var dots = $(".sDot");
-      
-      if(n > slides.length){slideIndex = 1;}
-      if(n < 1){slideIndex = slides.length;}
-      for(i = 0; i < slides.length; i++){
-        slides[i].style.display = "none";
-      }
-      for(i = 0; i < dots.length; i++){
-        dots[i].classList.remove("activeDot");
-      }
-      slides[slideIndex - 1].style.display = "flex";
-      dots[slideIndex - 1].classList.add("activeDot");
-    }
   </script>
 </html>

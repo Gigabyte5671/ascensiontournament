@@ -248,6 +248,7 @@ script{
 }
 .box{
   position: relative;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -344,8 +345,8 @@ script{
   border: 5px solid black;
   border-radius: 50%;
 }
-.slide{
-  display: none;
+.activeSlide{
+  display: flex;
 }
 
 .stats-pie{
