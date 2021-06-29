@@ -231,8 +231,8 @@ script{
   height: 10px;
 }
 .section .slideIndicator span{
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   margin-left: 3px;
   margin-right: 3px;
   background-color: white;
