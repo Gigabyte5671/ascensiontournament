@@ -550,3 +550,19 @@ footer{
   pointer-events: none !important;
   user-select: none !important;
 }
+
+
+@media only screen and (max-width: 799px){
+  :root{
+    --section_break_height: 40px;
+  }
+  #navlinks a{
+    width: 80px;
+  }
+  .sectionBreak h1{
+    font-size: 70px;
+  }
+}
+@media only screen and (max-width: 499px){
+  
+}
