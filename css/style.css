@@ -256,6 +256,9 @@ script{
   height: 100%;
   overflow: hidden;
 }
+.activeSlide{
+  display: flex;
+}
 .boxBackgroundImage{
   position: absolute;
   z-index: 0;
@@ -281,70 +284,53 @@ script{
   width: 70%;
   height: 80%;
   margin-top: 10px;
-  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: var(--glass_background_color);
   border: 1px solid var(--glass_border_color);
   border-radius: 7px;
   backdrop-filter: blur(5px);
   overflow: auto;
 }
-.boxInner > div:nth-child(1){
-  width: 20%;
+.boxSubsection{
+  width: auto;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
-}
-.boxInner > div:nth-child(2){
-  width: 40%;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 5px;
-  padding-right: 5px;
-  border-left: 1px solid var(--glass_border_color);
+  padding-left: 20px;
+  padding-right: 20px;
   border-right: 1px solid var(--glass_border_color);
 }
-.boxInner > div:nth-child(3){
-  width: 40%;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.boxInner > div:nth-child(3) > div{
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 10px;
+.boxSubsection:last-child{
+  border: unset;
 }
 .boxInner h2{
   margin: unset;
   color: white;
-  font-size: 22px;
+  font-size: 24px;
 }
-.tournamentEmblem{
+.boxInner p{
+  font-size: 16px;
+}
+.emblem{
   display: block;
   width: 100px;
   height: 100px;
-}
-.teamEmblem{
-  display: block;
-  width: 100px;
-  height: 100px;
-  border: 1px dashed white;
+  border-radius: 50%;
 }
 .boxInner p{
   color: white;
 }
-.boxInner ul{
+.teamSection ul{
   margin-right: auto;
 }
-.boxInner li{
+.teamSection li{
   align-items: center;
   color: white;
   margin-top: 3px;
   margin-bottom: 3px;
 }
-.boxInner li img{
+.teamSection li img{
   display: block;
   width: 30px;
   height: 30px;
@@ -353,25 +339,31 @@ script{
   border: 5px solid black;
   border-radius: 50%;
 }
-.activeSlide{
-  display: flex;
-}
-
-.teamSection{
-  width: 20%;
-}
 .teamPlayerList p{
   font-size: 18px;
+}
+
+.statsSection{
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.statsSection > div{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
 .stats-pie{
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 100px;
-  height: 100px;
-  min-width: 100px;
-  min-height: 100px;
+  width: 120px;
+  height: 120px;
+  min-width: 120px;
+  min-height: 120px;
   margin: 5px;
 }
 .stats-pie-bar{
@@ -379,9 +371,9 @@ script{
   z-index: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, transparent 45%, var(--glass_background_color) 30%);
+  background: radial-gradient(circle, transparent 47%, var(--glass_background_color) 30%);
   border-radius: 50%;
-  clip-path: polygon(50% 0, 50% 50%, 100% 50%, 100% 0);
+  clip-path: polygon(50% 50%, 50% 0%, 0% 0%, 50% 0%);
 }
 .stats-pie-outerRing{
   position: absolute;
@@ -394,8 +386,8 @@ script{
 .stats-pie-innerRing{
   position: absolute;
   z-index: 1;
-  width: 65%;
-  height: 65%;
+  width: 68%;
+  height: 68%;
   border: 1px solid var(--glass_border_color);
   border-radius: 50%;
 }
@@ -404,35 +396,34 @@ script{
   z-index: 2;
   width: 36px;
   margin-top: 10px;
-  margin-left: -2px;
+  margin-left: -16px;
 }
 .stats-pie-text p{
-  font-size: 22px;
+  font-size: 30px;
   font-family: 'Space Mono', monospace;
 }
 .stats-pie-text p:nth-child(1)::before{
-  content: "WINS";
+  content: "WIN";
   position: absolute;
-  top: -6px;
-  left: -2px;
-  font-size: 8px;
+  top: -9px;
+  left: 3px;
+  font-size: 10px;
   font-family: 'Space Mono', monospace;
 }
 .stats-pie-text p:nth-child(3)::before{
   content: "LOSS";
   position: absolute;
-  top: -6px;
-  right: -7px;
-  font-size: 8px;
+  top: -9px;
+  right: -17px;
+  font-size: 10px;
   font-family: 'Space Mono', monospace;
 }
-
 .stats-bar{
   position: relative;
   justify-content: center;
   align-items: flex-end;
   width: 20px;
-  height: 200px;
+  height: 250px;
   margin: 5px;
   border: 1px solid var(--glass_border_color);
   border-radius: 3px;
@@ -446,9 +437,40 @@ script{
   background-color: var(--glass_background_color);
 }
 .stats-bar-text{
-  transform: rotate(-90deg);
+  /*text-align: right;
+  transform: rotate(-90deg) translateX(-100%);*/
 }
 
+.linksSection{
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.linksSection > a{
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 5px;
+  border: 1px solid var(--glass_border_color);
+  border-radius: 7px;
+  transition: 0.1s ease all;
+}
+.linksSection > a:hover{
+  border: 2px solid var(--glass_border_color);
+  transform: scale(1.02);
+}
+.linksSection .emblem{
+  width: 60px;
+  height: 60px;
+}
+.linksSection > a p{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 18px;
+}
 
 .teamPlayerList{
   
@@ -461,6 +483,10 @@ script{
 }
 .teamPlayerList li img{
   
+}
+
+.emptySection{
+  display: none;
 }
 
 
