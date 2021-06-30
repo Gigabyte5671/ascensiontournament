@@ -313,11 +313,12 @@ script{
   align-items: center;
   min-width: 200px;
   padding-left: 20px;
-  padding-right: 40px;
+  padding-right: 20px;
   border-right: 1px solid var(--glass_border_color);
 }
 .boxSubsection:last-child{
   border: unset;
+  margin-right: 20px;
 }
 .boxSubsection h2{
   align-self: flex-start;
