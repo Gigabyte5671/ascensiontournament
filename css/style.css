@@ -477,6 +477,7 @@ script{
   padding: 5px;
   border: 1px solid var(--glass_border_color);
   border-radius: 7px;
+  backdrop-filter: blur(4px);
   transition: 0.1s ease all;
 }
 .linksSection > a:hover{
