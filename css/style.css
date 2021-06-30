@@ -326,6 +326,7 @@ script{
   margin-bottom: 10px;
   color: white;
   font-size: 24px;
+  border-bottom: 1px solid white;
 }
 .boxSubsection p{
   font-size: 16px;
