@@ -77,6 +77,13 @@
         }
       }
     },
+    "002":{
+      "meta":{
+        "id":"teams",
+        "title":"Teams",
+        "styles":""
+      }
+    },
     "003":{
       "meta":{
         "id":"highlights",
