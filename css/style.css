@@ -263,6 +263,7 @@ script{
   width: 100%;
   height: 100%;
   background-size: cover;
+  animation: 0.7s ease fadeIn forwards;
 }
 .particles{
   position: absolute;
@@ -354,6 +355,13 @@ script{
 }
 .activeSlide{
   display: flex;
+}
+
+.teamSection{
+  width: 20%;
+}
+.teamPlayerList p{
+  font-size: 18px;
 }
 
 .stats-pie{
@@ -464,25 +472,11 @@ footer{
 
 
 .fadeIn{
-  animation: 1s ease fadeIn;
+  animation: 1s ease fadeIn forwards;
 }
 @keyframes fadeIn{
   from {opacity: 0;}
   to   {opacity: 1;}
-}
-.slideMoveLeft{
-  animation: 1s ease slideMoveLeft;
-}
-@keyframes slideMoveLeft{
-  from {transform: translateX(100%);}
-  to   {transform: translateX(0%);}
-}
-.slideMoveRight{
-  animation: 1s ease slideMoveRight;
-}
-@keyframes slideMoveRight{
-  from {transform: translateX(-100%);}
-  to   {transform: translateX(0%);}
 }
 
 
