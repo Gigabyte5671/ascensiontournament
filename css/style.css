@@ -218,6 +218,7 @@ script{
   background-image: url("../assets/images/katabatic-1.jpg");
   background-size: cover;
   overflow: hidden;
+  animation: 1s ease fadeIn forwards;
 }
 .landing .bgVideo{
   position: absolute;
