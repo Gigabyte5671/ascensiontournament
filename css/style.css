@@ -327,17 +327,17 @@ script{
   color: white;
   font-size: 24px;
   border-bottom: 1px solid white;
+  text-shadow: 0px 1px 10px grey;
 }
 .boxSubsection p{
   font-size: 16px;
+  color: white;
+  text-shadow: 0px 1px 10px grey;
 }
 .emblem{
   display: block;
   width: 100px;
   height: 100px;
-}
-.boxInner p{
-  color: white;
 }
 .teamSection h2{
   margin: unset;
@@ -494,6 +494,7 @@ script{
   margin-left: 10px;
   margin-right: 10px;
   font-size: 18px;
+  text-shadow: 0px 1px 10px grey;
 }
 
 .teamPlayerList{
