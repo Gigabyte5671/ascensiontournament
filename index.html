@@ -28,10 +28,14 @@
         <div id="navlinks">
           <a href="#home"><p>Home</p><div></div></a>
         </div>
+        <img id="mobile-navmenu-open" src="assets/icons/menu_white_24dp.svg" draggable="false" alt="" onclick="toggleMobileNav();">
       </div>
-      <div id="mobile-navmenu">
-        <div id="mobile-navlinks">
-          <a href="#home"><p>Home</p><div></div></a>
+      <div id="mobile-navmenu" class="hidden" onclick="toggleMobileNav();">
+        <div id="mobile-navmenuInner">
+          <img id="mobile-navmenu-close" src="assets/icons/close_white_24dp.svg" draggable="false" alt="" onclick="toggleMobileNav();">
+          <div id="mobile-navlinks">
+            <a href="#home"><p>Home</p><div></div></a>
+          </div>
         </div>
       </div>
       

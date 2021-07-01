@@ -9,6 +9,8 @@
   
   --glass_background_color: rgba(255,255,255,0.3);
   --glass_border_color: rgba(255,255,255,0.2);
+  --glass_background_color_dark: rgba(0,0,0,0.9);
+  --glass_border_color_dark: rgba(0,0,0,0.6);
   
   --nav_height: 46px;
   --section_break_height: 60px;
@@ -124,28 +126,75 @@ script{
   filter: invert(1);
 }
 
-#mobile-navmenu{
+#mobile-navmenu-open{
   display: none;
-  width: calc(100% - 110px);
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+
+#mobile-navmenu{
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  flex-direction: row;
+  width: 100%;
   height: 100%;
-  background-color: black;
   animation: 0.2s ease slideInFromRight forwards;
+}
+#mobile-navmenuInner{
+  margin-left: auto;
+  flex-direction: column;
+  width: 350px;
+  height: 100%;
+  max-width: calc(100% - 150px);
+  background-color: var(--glass_background_color_dark);
+  border: 2px solid var(--glass_border_color_dark);
+  backdrop-filter: blur(5px);
+}
+#mobile-navmenu-close{
+  width: 30px;
+  height: 30px;
+  margin-top: 7px;
+  margin-left: auto;
+  margin-right: 10px;
+  margin-bottom: 20px;
 }
 #mobile-navlinks{
   flex-direction: column;
+  align-items: center;
   width: 100%;
   height: 100%;
 }
 #mobile-navlinks a{
-  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
   height: 40px;
   padding: 5px;
+  margin: 5px;
+  color: white;
+  background-color: var(--glass_background_color_dark);
+  border: 2px solid var(--glass_border_color);
+  border-radius: 7px;
 }
 #mobile-navlinks a p{
-  
+  font-size: 16px;
 }
 #mobile-navlinks a div{
-  
+  display: none;
+  width: 0%;
+  height: 2px;
+  margin-top: 7px;
+  background-color: white;
+  transition: 0.2s ease all;
+}
+#mobile-navlinks a:hover div{
+  width: 100%;
 }
 
 
@@ -562,6 +611,12 @@ footer{
   to   {opacity: 1;
         transform: translateY(0%);}
 }
+@keyframes slideInFromRight{
+  from {opacity: 0.7;
+        transform: translateX(100%);}
+  to   {opacity: 1;
+        transform: translateX(0%);}
+}
 
 
 .filter-1{
@@ -588,6 +643,14 @@ footer{
   }
   .sectionBreak h1{
     font-size: 70px;
+  }
+}
+@media only screen and (max-width: 649px){
+  #navlinks{
+    display: none;
+  }
+  #mobile-navmenu-open{
+    display: flex;
   }
 }
 @media only screen and (max-width: 499px){
