@@ -109,32 +109,6 @@
           }
         }
       }
-    },
-    "004":{
-      "meta":{
-        "id":"signups",
-        "title":"Signups",
-        "styles":""
-      },
-      "slides":{
-        "001":{
-          "meta":{
-            "id":"",
-            "title":"",
-            "styles":"",
-            "type":"text"
-          },
-          "content":{
-            "img":{
-              "src":""
-            },
-            "bgImg":{
-              "src":""
-            },
-            "text":"The signup form will go here..."
-          }
-        }
-      }
     }
   }
 }
