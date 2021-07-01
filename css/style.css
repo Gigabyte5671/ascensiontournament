@@ -124,6 +124,30 @@ script{
   filter: invert(1);
 }
 
+#mobile-navmenu{
+  display: none;
+  width: calc(100% - 110px);
+  height: 100%;
+  background-color: black;
+  animation: 0.2s ease slideInFromRight forwards;
+}
+#mobile-navlinks{
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+#mobile-navlinks a{
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+}
+#mobile-navlinks a p{
+  
+}
+#mobile-navlinks a div{
+  
+}
+
 
 #pageContent{
   flex-direction: column;
