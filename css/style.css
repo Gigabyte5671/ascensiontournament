@@ -72,6 +72,7 @@ script{
 #logo{
   width: 110px;
   margin-right: 30px;
+  user-select: none;
 }
 #logo img{
   width: 55px;
@@ -255,6 +256,8 @@ script{
   align-items: center;
   width: 100%;
   height: var(--section_break_height);
+  min-height: var(--section_break_height);
+  max-height: var(--section_break_height);
   background-color: black;
   box-shadow: 0px 0px 5px black;
   overflow: hidden;
@@ -356,7 +359,7 @@ script{
 }
 .boxBadge{
   z-index: 1;
-  width: 100px;
+  width: 180px;
   margin-top: 10px;
   margin-bottom: auto;
 }
@@ -390,6 +393,7 @@ script{
 }
 .boxSubsection{
   width: auto;
+  height: fit-content;
   flex-direction: column;
   justify-content: center;
   align-items: center;
