@@ -95,7 +95,7 @@ script{
 #navlinks a{
   flex-direction: column;
   align-items: center;
-  width: 100px;
+  width: 90px;
   padding: 2px;
   opacity: 0.8;
   transition: 0.2s ease opacity;
@@ -237,8 +237,36 @@ script{
 .landing h1{
   z-index: 1;
   margin-top: 4px;
+  margin-bottom: unset;
   color: white;
-  font-size: 30px;
+  font-size: 28px;
+}
+.landing h2{
+  z-index: 1;
+  margin-top: 4px;
+  margin-bottom: unset;
+  color: white;
+  font-size: 20px;
+}
+.landing a{
+  z-index: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 2px;
+  opacity: 0.8;
+  transition: 0.2s ease opacity;
+}
+.landing a div{
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  transition: 0.2s ease all;
+}
+.landing a:hover{
+  opacity: 1;
+}
+.landing a:hover div{
+  width: 100%;
 }
 .landing::after{
   content: "";
@@ -358,7 +386,7 @@ script{
   animation: 0.7s ease fadeIn forwards;
 }
 .boxBadge{
-  z-index: 1;
+  z-index: 2;
   width: 180px;
   margin-top: 10px;
   margin-bottom: auto;
@@ -379,8 +407,8 @@ script{
   width: 70%;
   height: 80%;
   margin-top: 10px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: var(--glass_background_color);
   border: 1px solid var(--glass_border_color);
   border-radius: 7px;
@@ -413,12 +441,12 @@ script{
   color: white;
   font-size: 24px;
   border-bottom: 1px solid white;
-  text-shadow: 0px 1px 10px grey;
+  text-shadow: 0px 1px 8px black;
 }
 .boxSubsection p{
   font-size: 16px;
   color: white;
-  text-shadow: 0px 1px 10px grey;
+  text-shadow: 0px 1px 8px black;
 }
 .emblem{
   display: block;
@@ -473,6 +501,7 @@ script{
   min-width: 120px;
   min-height: 120px;
   margin: 5px;
+  user-select: none;
 }
 .stats-pie-bar{
   position: absolute;
@@ -535,6 +564,7 @@ script{
   margin: 5px;
   border: 1px solid var(--glass_border_color);
   border-radius: 3px;
+  user-select: none;
 }
 .stats-bar-fill{
   position: absolute;
@@ -545,6 +575,7 @@ script{
   background-color: var(--glass_background_color);
 }
 .stats-bar-text{
+  font-family: 'Space Mono', monospace;
   /*text-align: right;
   transform: rotate(-90deg) translateX(-100%);*/
 }
@@ -579,20 +610,7 @@ script{
   margin-left: 10px;
   margin-right: 10px;
   font-size: 18px;
-  text-shadow: 0px 1px 10px grey;
-}
-
-.teamPlayerList{
-  
-}
-.teamPlayerList ul{
-  
-}
-.teamPlayerList li{
-  
-}
-.teamPlayerList li img{
-  
+  text-shadow: 0px 1px 8px black;
 }
 
 .emptySection{
@@ -601,10 +619,18 @@ script{
 
 
 footer{
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
   color: white;
   opacity: 0.6;
 }
 footer p{
+  font-size: 12px;
+}
+footer a{
+  color: white;
   font-size: 12px;
 }
 footer img{
