@@ -16,6 +16,8 @@
   --section_break_height: 60px;
   --section_height: 400px;
   --short_section_height: 200px;
+  
+  --inner_shadow_color: #0000004a;
 }
 
 html{
@@ -503,6 +505,8 @@ script{
   min-width: 120px;
   min-height: 120px;
   margin: 5px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 3px var(--inner_shadow_color);
   user-select: none;
 }
 .stats-pie-bar{
@@ -566,6 +570,7 @@ script{
   margin: 5px;
   border: 1px solid var(--glass_border_color);
   border-radius: 3px;
+  box-shadow: 0px 1px 3px var(--inner_shadow_color);
   user-select: none;
 }
 .stats-bar-fill{
@@ -603,6 +608,7 @@ script{
   border-radius: 7px;
   backdrop-filter: blur(4px);
   transition: 0.1s ease all;
+  box-shadow: 0px 1px 3px var(--inner_shadow_color);
 }
 .linksSection > a:hover{
   border: 2px solid var(--glass_border_color);
