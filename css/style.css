@@ -354,6 +354,12 @@ script{
   background-size: cover;
   animation: 0.7s ease fadeIn forwards;
 }
+.boxBadge{
+  z-index: 1;
+  width: 100px;
+  margin-top: 10px;
+  margin-bottom: auto;
+}
 .particles{
   position: absolute;
   z-index: 1;

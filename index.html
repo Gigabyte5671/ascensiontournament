@@ -61,12 +61,10 @@
           <div class="slideRight" onclick="moveCarousel(event,'move',1)"><img src="assets/icons/chevron_right_black_24dp.svg" draggable="false" alt=""></div>
           <div class="slideIndicator"><span onclick="moveCarousel(event,'to',1)"></span><span onclick="moveCarousel(event,'to',2)"></span><!--<span onclick="moveCarousel(event,'to',3)"></span><span onclick="moveCarousel(event,'to',4)"></span>--></div>
           <div class="box">
+            <img class="boxBadge" src="assets/images/UAE_Alpha_Circuit-smaller.png" draggable="false" alt="" title="This tournament is part of the 2021 Alpha Circuit.">
             <div class="boxInner">
               <div class="boxSubsection">
-                <h1 style="color:white;font-size:90px;font-family:'Space Mono',monospace;">#1</h1>
-              </div>
-              <div class="boxSubsection">
-                <h2>Spring&nbsp;"Ascension"</h2>
+                <h2>#1&nbsp;Spring&nbsp;"Ascension"</h2>
                 <p>The UAE Alpha Circuit for Tribes: Ascend made its debut in 2021 with the Spring "Ascension" tournament. It featured its very own UAE XLR8 team competing against team BAPPLE. The tournament was played over 5 maps in one night. It was a well fought and extremely close tournament by both teams. Ultimately the tournament was brought to the 5th and final map with BAPPLE winning the tournament with 3 maps, XLR8 picking up 2 maps.</p>
               </div>
             </div>
@@ -74,12 +72,10 @@
             <img class="particles" src="assets/images/particles_960.gif" draggable="false" alt="">
           </div>
           <div class="box">
+            <img class="boxBadge" src="assets/images/UAE_Alpha_Circuit-smaller.png" draggable="false" alt="" title="This tournament is part of the 2021 Alpha Circuit.">
             <div class="boxInner">
               <div class="boxSubsection">
-                <h1 style="color:white;font-size:90px;font-family:'Space Mono',monospace;">#2</h1>
-              </div>
-              <div class="boxSubsection">
-                <h2>Summer&nbsp;"Phoenix"</h2>
+                <h2>#2&nbsp;Summer&nbsp;"Phoenix"</h2>
                 <p>The second tournament in the series, "Phoenix" is set to begin in late July. Same rules as before, but with four teams competing. Sign up now if you'd like to participate!</p>
               </div>
             </div>
@@ -264,7 +260,7 @@
             <div class="boxInner">
               <div class="boxSubsection linksSection">
                 <p>Think you have what it takes to challenge XLR8 or BAPPLE?</p>
-                <a href="https://www.twitch.tv/greenearth20" target="_blank" rel="noreferrer">
+                <a href="#" target="_blank" rel="noreferrer">
                   <img src="assets/images/Challonge_2012.png" class="emblem" draggable="false" alt="">
                   <p>Visit the Challonge page to sign up or join a team!</p>
                 </a>
@@ -291,8 +287,8 @@
     var sdata;
     var tdata;
     var data_fetch_enable = 1;
-    /*function getServerData(){
-      if(data_fetch_enable == 1){
+    function getServerData(){
+      /*if(data_fetch_enable == 1){
         data_fetch_enable = 0;
         $.ajax({
           dataType:"json",
@@ -312,7 +308,7 @@
         data_fetch_enable = 0;
         $.ajax({
           dataType:"json",
-          url:"teams.json",
+          url:"lib/teams.json",
           cache:false,
           success:function(data1){
             tdata = data1;
