@@ -592,9 +592,15 @@ script{
 
 
 footer{
-  margin-top: auto;
   color: white;
   opacity: 0.6;
+}
+footer p{
+  font-size: 12px;
+}
+footer img{
+  width: 18px;
+  margin-left: 4px;
 }
 
 
