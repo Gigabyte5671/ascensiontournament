@@ -229,6 +229,8 @@ script{
   left: 0;
   min-width: 100%;
   min-height: 100%;
+  user-select: none;
+  pointer-events: none;
 }
 .landing .logo{
   z-index: 1;
