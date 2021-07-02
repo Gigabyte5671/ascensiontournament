@@ -309,6 +309,8 @@ script{
   align-items: center;
   width: 100%;
   height: var(--section_height);
+  min-height: var(--section_height);
+  max-height: var(--section_height);
   overflow: hidden;
 }
 .short-section{
