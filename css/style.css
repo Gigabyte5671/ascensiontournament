@@ -470,8 +470,8 @@ script{
 }
 .teamSection li img{
   display: block;
-  width: 30px;
-  height: 30px;
+  width: 28px;
+  height: 28px;
   margin-right: 5px;
   background-color: black;
   border: 5px solid black;
@@ -575,6 +575,10 @@ script{
   width: 102%;
   height: 70%;
   background-color: var(--glass_background_color);
+}
+.stats-bar-fill p{
+  font-size: 10px;
+  margin-bottom: auto;
 }
 .stats-bar-text{
   font-family: 'Space Mono', monospace;
