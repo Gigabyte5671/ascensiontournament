@@ -27,6 +27,9 @@
         <a href="" id="logo"><img src="assets/icons/United_Anarchy_Enterprises_Logo_3_W_small.png" draggable="false" alt="site logo"><div class="title">WT</div></a>
         <div id="navlinks">
           <a href="#home"><p>Home</p><div></div></a>
+          <a href="#tournaments"><p>Tournaments</p><div></div></a>
+          <a href="#teams"><p>Teams</p><div></div></a>
+          <a href="#highlights"><p>Highlights</p><div></div></a>
         </div>
         <img id="mobile-navmenu-open" src="assets/icons/menu_white_24dp.svg" draggable="false" alt="" onclick="toggleMobileNav();">
       </div>
@@ -35,6 +38,9 @@
           <img id="mobile-navmenu-close" src="assets/icons/close_white_24dp.svg" draggable="false" alt="" onclick="toggleMobileNav();">
           <div id="mobile-navlinks">
             <a href="#home"><p>Home</p><div></div></a>
+            <a href="#tournaments"><p>Tournaments</p><div></div></a>
+            <a href="#teams"><p>Teams</p><div></div></a>
+            <a href="#highlights"><p>Highlights</p><div></div></a>
           </div>
         </div>
       </div>
@@ -268,6 +274,12 @@
           </div>
         </div>-->
         
+        <div class="section" style="height:100px;background-color:black;">
+          <footer>
+            <p>Designed&nbsp;by&nbsp;Gigabyte5671&nbsp;&copy;2021&nbsp;|&nbsp;Gigabyte#3310&nbsp;|&nbsp;Thanks&nbsp;for&nbsp;your&nbsp;support<img src="assets/icons/heart-24px.svg" draggable="false" alt=""></p>
+          </footer>
+        </div>
+        
       </div>
     </main>
   </body>
@@ -279,7 +291,7 @@
     var sdata;
     var tdata;
     var data_fetch_enable = 1;
-    function getServerData(){
+    /*function getServerData(){
       if(data_fetch_enable == 1){
         data_fetch_enable = 0;
         $.ajax({
@@ -294,7 +306,7 @@
             console.log("S-data Error " + xhr.status);
           }
         });
-      }
+      }*/
       
       if(data_fetch_enable == 1){
         data_fetch_enable = 0;
