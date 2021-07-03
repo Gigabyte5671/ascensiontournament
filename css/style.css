@@ -218,6 +218,8 @@ script{
   width: 100%;
   padding-bottom: 20px;
   height: var(--section_height);
+  min-height: var(--section_height);
+  max-height: var(--section_height);
   background-color: var(--primary_color);
   background-image: url("../assets/images/katabatic-1.jpg");
   background-size: cover;
