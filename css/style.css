@@ -83,6 +83,7 @@ script{
   background-color: black;
   border-radius: 50%;
   box-shadow: 0px 0px 5px black;
+  border: 3px solid black;
 }
 #logo .title{
   margin-top: -7px;
